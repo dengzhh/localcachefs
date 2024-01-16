@@ -5,7 +5,8 @@ all: juicefs
 REVISION := $(shell git rev-parse --short HEAD 2>/dev/null)
 REVISIONDATE := $(shell git log -1 --pretty=format:'%ad' --date short 2>/dev/null)
 PKG := github.com/juicedata/juicefs/pkg/version
-LDFLAGS = -s -w
+#LDFLAGS = -s -w -X google.golang.org/protobuf/reflect/protoregistry.conflictPolicy=warn
+LDFLAGS = -X google.golang.org/protobuf/reflect/protoregistry.conflictPolicy=warn
 ifneq ($(strip $(REVISION)),) # Use git clone
 	LDFLAGS += -X $(PKG).revision=$(REVISION) \
 		   -X $(PKG).revisionDate=$(REVISIONDATE)

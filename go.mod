@@ -1,6 +1,6 @@
 module github.com/juicedata/juicefs
 
-go 1.17
+go 1.18
 
 require (
 	cloud.google.com/go/compute v1.5.0
@@ -12,6 +12,7 @@ require (
 	github.com/NetEase-Object-Storage/nos-golang-sdk v0.0.0-20191125093154-335c2b73bf6b
 	github.com/agiledragon/gomonkey/v2 v2.6.0
 	github.com/aliyun/aliyun-oss-go-sdk v2.2.2+incompatible
+	github.com/apache/ozone-go/api v0.0.0-20220902065753-06a9ffad5a76
 	github.com/aws/aws-sdk-go v1.43.26
 	github.com/baidubce/bce-sdk-go v0.9.111
 	github.com/billziss-gh/cgofuse v1.5.0
@@ -74,6 +75,12 @@ require (
 	google.golang.org/api v0.70.0
 	gopkg.in/kothar/go-backblaze.v0 v0.0.0-20210124194846-35409b867216
 	xorm.io/xorm v1.0.7
+
+)
+
+require (
+	github.com/hortonworks/gohadoop v0.0.0-20180913181356-4e92e1475b38 // indirect
+	github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d // indirect
 )
 
 require (
@@ -157,10 +164,10 @@ require (
 	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/klauspost/compress v1.13.4 // indirect
 	github.com/klauspost/cpuid v1.3.1 // indirect
-	github.com/klauspost/cpuid/v2 v2.0.3 // indirect
+	github.com/klauspost/cpuid/v2 v2.1.1 // indirect
 	github.com/klauspost/pgzip v1.2.5 // indirect
 	github.com/klauspost/readahead v1.3.1 // indirect
-	github.com/klauspost/reedsolomon v1.9.11 // indirect
+	github.com/klauspost/reedsolomon v1.11.7 // indirect
 	github.com/kr/fs v0.1.0 // indirect
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/mattn/go-runewidth v0.0.13 // indirect
@@ -245,3 +252,7 @@ replace github.com/vbauerster/mpb/v7 v7.0.3 => github.com/juicedata/mpb/v7 v7.0.
 replace google.golang.org/grpc v1.43.0 => google.golang.org/grpc v1.29.0
 
 replace xorm.io/xorm v1.0.7 => gitea.com/davies/xorm v1.0.8-0.20220528043536-552d84d1b34a
+
+replace github.com/apache/ozone-go/api v0.0.0-20220902065753-06a9ffad5a76 => ./ozone-go/api
+
+replace github.com/klauspost/reedsolomon v0.0.0 => ./reedsolomon
